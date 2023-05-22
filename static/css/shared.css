@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+:root{
+    --primary-color:rgb(22, 22, 22);
+    --secondary-color:rgb(44,44,44);
+    --third-color: rgb(11,11,11);
+    --darkest-color: rgb(5,5,5);
+    --out-color: rgb(16,16,16);
+    --scrollerGray: rgb(66,66,66);
+    --maxPrimaryPageWidth: 1400px;
+    --maxPrimaryPageWidthMinusPad: 1340px;
+    --primaryFontColor: #ffffff;
+    --effectColor: rgb(192, 235, 0);
+    --hoverColor: rgb(66,66,66);
+    --secondaryHover: rgb(88,88,88);
+}
+
+body 
+{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color:var(--out-color);
+    color:var(--primaryFontColor);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 30px;
+}
+
+body a{
+    text-decoration: none;
+    color: var(--primaryFontColor);
+}
+
+span.green{
+    color: lightgreen;
+}
+
+span.orange{
+    color:orange;
+}
+
+span.red{
+    color:red;
+}
+
+span.white{
+    color: var(--primaryFontColor);
+}
+
+.topnav
+{
+    /* overflow: hidden; */
+    background-color: var(--darkest-color);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.topnav .homepage{
+    display: flex;
+    flex-direction: row;
+}
+
+div.homepage{
+    background-color: var(--primary-color);
+    border:none;
+    border-radius: 7px;
+    margin-left: 12px;
+}
+
+.homepage-btn{
+    font-family: 'Poppins', sans-serif;
+    background: var(--primary-color);
+    color: var(--primaryFontColor);
+    padding: 14px;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+div.topnav .search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#search-input{
+    font-family: 'Poppins', sans-serif;
+    height: 35px;
+    width: 500px;
+    border: none;
+    font-size: 16px;
+    padding: 6px;
+}
+
+#search-input:focus{
+    outline: none;
+}
+
+#search-submit{
+    padding: 8px 14px;
+    font-size: 18px;
+    background: var(--primary-color);
+    color: var(--primaryFontColor);
+    border: none;
+    border-radius: 0px 7px 7px 0px;
+    cursor: pointer;
+}
+
+#search-submit:hover{
+    background: var(--hoverColor);
+}
+
+div.user, div.user-dropdown{
+    margin-right: 12px;
+}
+
+.user{
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.user p, .user a{
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primaryFontColor);
+}
+.btn-switch{
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 30px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    background: var(--secondary-color);
+    color: var(--primaryFontColor);
+    font-weight: 600;
+    font-size: 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.dropdowns{
+    display: inline-flex;
+}
+
+/* Style The Dropdown Button */
+.user-dropdown-btn, .login-btn{
+    font-family: 'Poppins', sans-serif;
+    background: var(--primary-color);
+    color: var(--primaryFontColor);
+    padding: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .user-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .user-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+  }
+  
+  /* Links inside the dropdown */
+  .user-dropdown-content a {
+    color: var(--primaryFontColor);
+    font-weight: 600;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .user-dropdown-content a:hover {background-color: var(--hoverColor);}
+  
+  /* Show the dropdown menu on hover */
+  .user-dropdown:hover .user-dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .user-dropdown:hover .user-dropdown-btn, .login-btn:hover, .homepage-btn:hover, .btn-switch:hover{
+    background-color: var(--hoverColor);
+  }
+
+  /* .movie-flex.title:hover{
+      text-decoration: underline;
+  } */
+
+div.item-data .item-title:hover{
+    text-decoration: underline;
+}
+
+div.item-poster a img.poster:hover{
+    filter: brightness(120%); 
+}
+
+
+div.scroller::-webkit-scrollbar {
+    height: 12px;
+    width: 8px;
+}
+
+div.scroller::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+div.scroller::-webkit-scrollbar-thumb {
+    background-color: var(--scrollerGray);
+    border-radius: 20px;
+}
+
+div.scroller::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondaryHover);
+}
+
+.hidden_info { 
+    display: none; 
+    opacity: 0;
+}

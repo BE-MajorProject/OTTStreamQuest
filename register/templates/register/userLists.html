@@ -1,0 +1,17 @@
+{% extends "../register/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<link href="{% static 'css/register.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/user.css' %}" rel="stylesheet" type="text/css" />
+<div class="lists">
+    <script src="{% static 'js/lists.js' %}"></script>
+    <link href="{% static 'css/lists.css' %}" rel="stylesheet" type="text/css" />
+    <div class="lists-content" id="lists-content">
+        <div class="lists-user" id="lists-user">
+            <h3 class="username" id="username"></h3> 
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+.register .form-group{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register .btn-success{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    max-width: 200px;
+    padding: 10px 15px;
+    background: var(--secondary-color);
+    color: var(--primaryFontColor);
+    font-weight: 600;
+    font-size: 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.btn-success:hover{
+    background-color: var(--hoverColor);
+}
+
+.register a{
+    font-weight: 600;
+}
+
+.register a:hover{
+    text-decoration: underline;
+}
+
+div.register-base{
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+}
+
+div.register{
+    background-color: var(--primary-color);
+    max-width: var(--maxPrimaryPageWidth);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    align-self: center;
+}
+
+.profile-href:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

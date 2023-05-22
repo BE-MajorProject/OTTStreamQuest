@@ -1,0 +1,85 @@
+{% extends "../movie/base.html" %}
+{% load static %}
+{% block content %}
+{% load i18n %} 
+<link href="{% static 'css/details.css' %}" rel="stylesheet" type="text/css" />
+<script src="{% static 'js/scripts_details.js' %}"></script>
+<main id="main">
+    <!-- <h2 id="current-list">Details</h2> -->
+    <div class = "movie-details-back" id="movie-details-background">
+        <div class = "movie-details-back-bg">
+            <div class="movie-details">
+                <div class="movie-details-poster">
+                    <img id="poster" src="" alt="Poster">
+                </div>
+                <div class="movie-details-info">
+                    <div class="title">
+                        <h2 class="7">
+                            <a id="a-title"></a>
+                            <span class="tag release_date" id="span-release-date"></span>
+                        </h2>
+                        <div class="genres">
+                            <a id="a-genres"></a>
+                        </div>
+                    </div>
+                    <div class="rating_div">
+                        <div class="rating_item">
+                            <a id="rating_title">{% translate "tmdb-rating" %}</a>
+                            <span id="sp_tmdbrating"></span>
+                        </div>
+                        {% if user.is_authenticated %}
+                        <div class="rating_item">
+                            <a id="rating_title">{% translate "your-rating" %}</a>
+                            <span id="sp_yourrating"></span>
+                        </div>
+                        <div class="rating_item">
+                            <a id="rating_title">{% translate "watchlist" %}</a>
+                            <span id="sp_watchlist"></span>
+                        </div>
+                        <div class="rating_item">
+                            <a id="rating_title">{% translate "lists" %}</a>
+                            <span id="sp_list"><i class="fa fa-list"></i></span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="details-overview" id="details-overview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class= "movie-content">
+        <div class="facts" id="facts">
+            <section id="original_title">
+            </section>
+            <section id="director">
+            </section>
+            <section id="tagline">
+            </section>
+            <section id="status">
+            </section>
+            <section class="keywords" id="keywords">
+            </section>
+        </div>
+        <div class="recommendations" id="recommendations">
+        </div>
+    </div>
+</main>
+<div id="myModal" class="Modal is-hidden is-visuallyHidden">
+    <!-- Modal content -->
+    <div class="Modal-content">
+        <p class="Modal-title">{% translate "rate-this-movie" %}<span id="closeRatingModal" class="Close"><i class="fa fa-times"></i></span></p>
+        <div class="modal-rate">
+            <p class="p-rate"><a id="rate-1">1</a><a id="rate-2">2</a><a id="rate-3">3</a><a id="rate-4">4</a><a id="rate-5">5</a><a id="rate-6">6</a><a id="rate-7">7</a><a id="rate-8">8</a><a id="rate-9">9</a><a id="rate-10">10</a></p>
+            <p class="p-remove"><a id="rate-remove">{% translate "remove-rating" %}</a></p>
+        </div>
+    </div>
+</div>
+<div id="listModal" class="Modal is-hidden is-visuallyHidden">
+    <div class="Modal-content">
+        <p class="Modal-title">{% translate "add-movie-to-list" %}<span id="closeListModal" class="Close"><i class="fa fa-times"></i></span></p>
+        <div class="modal-list" id="modal-list">
+        </div>
+    </div>
+</div>
+{% endblock %}

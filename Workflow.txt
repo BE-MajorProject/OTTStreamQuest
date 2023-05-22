@@ -1,0 +1,38 @@
+To improve:
+- Recommendation
+- Larger movie database
+- More ratings
+
+To do:
+- List Description
+- Timestamp for watchlist, list
+- Deploy on Pythonanywhere
+
+Done:
+- Adding similar videos
+- Added registration option
+- Added login option
+- Added option to add ratings
+- Added production companies/director/original language
+- Added styles for login and registration
+- Added user panel page
+- Possibility to delete the rating
+- Added search page
+- User - the ability to see all your ratings
+- User - Watchlist
+- Drop down for user + topnav style
+- Highlighting clickable objects on hover
+- Search by keyword
+- Search Dropdown (Title/Keyword)
+- Exchange of ratings from TMDB for ratings from the database
+- Timestamp for rating
+- Add to list, remove from list
+- See the whole list
+- Watchlist and List control from Profile
+- Show Lists in Your Activity
+- Delete & Edit lists
+- Search by director
+- Letter of Recommendations
+
+Videos to check out:
+- Taxi Driver (not enough ratings)
