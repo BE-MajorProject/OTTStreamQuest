@@ -25,7 +25,7 @@ def movie_list(request):
     return render(request, 'movie/movie_list.html')
 
 def tp(request):
-    return render(request, 'movie/tp.html')
+    return render(request, 'movie/index.html')
 
 def movie_detail(request, pk):
     return render(request, 'movie/movie_detail.html')
