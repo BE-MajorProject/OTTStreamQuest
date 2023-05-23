@@ -24,6 +24,10 @@ from django.utils.translation import activate
 def movie_list(request):
     return render(request, 'movie/movie_list.html')
 
+def plans(request):
+    # plans= ott_plans.objects.all().order_by('-createdTime')   , {'plans':plans}
+    return render(request, 'movie/plans.html')
+
 def tp(request):
     return render(request, 'movie/index.html')
 
