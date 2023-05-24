@@ -58,6 +58,8 @@ def booking(request, id):
     else:
         return render(request, 'movie/booking.html',{'plans':plans})
 
+def planbuy(request):
+    return render(request, 'movie/planbuy.html')
 
 def receipt(request):
 
@@ -93,8 +95,8 @@ def confirm_booking(request):
         # print("Mail successfully sent")
 
         # print("User Added")
-
-        return redirect('/payment/pay')
+        return render(request, '/payment/pay')
+        # return redirect('movie/payment/pay')
     else:
         return render(request,'movie/booking.html')
 

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rating.apps.RatingConfig',
     "django_pivot",
     'django_extensions',
+    'payment',
 ]
 
 MIDDLEWARE = [

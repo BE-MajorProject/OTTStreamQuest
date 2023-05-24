@@ -28,6 +28,7 @@ urlpatterns = i18n_patterns(
     path('jsi18n/', JavaScriptCatalog.as_view(domain="django"), name='javascript-catalog'),
     path('admin/', admin.site.urls),
     path('register/', v.register, name="register"),
+    path("payment/", include('payment.urls')),
     path('', include('movie.urls', namespace='movies_name')),
     path('', include("django.contrib.auth.urls")),
     path('', include('register.urls', namespace='registers_name')),
