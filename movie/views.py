@@ -7,7 +7,7 @@ from django.shortcuts import get_object_or_404, render
 # Create your views here.
 from django.views.generic import ListView, DetailView
 from numpy import moveaxis
-from .models import Movie, Binary
+from .models import Movie, Binary, ott_plans
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.db.models import Q
@@ -25,8 +25,12 @@ def movie_list(request):
     return render(request, 'movie/movie_list.html')
 
 def plans(request):
-    # plans= ott_plans.objects.all().order_by('-createdTime')   , {'plans':plans}
-    return render(request, 'movie/plans.html')
+    plans= ott_plans.objects.all().order_by('-createdTime')
+    return render(request, 'movie/plans.html', {'plans':plans})
+
+def single_ott(request, id):
+    plans = ott_plans.objects.get(id=id)
+    return render(request,'movie/plan-details.html',{'plans':plans})
 
 def tp(request):
     return render(request, 'movie/index.html')

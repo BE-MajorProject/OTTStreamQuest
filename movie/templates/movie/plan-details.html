@@ -50,22 +50,13 @@
       type="text/css"
       href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
-    <!-- <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
 
     <!-- Template Main CSS File -->
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'assets/css/news.css' %}"> -->
     <link
       rel="stylesheet"
       type="text/css"
       href="{% static 'assets/css/main.css' %}"
     />
-
-    <!-- <link href="assets/css/main.css" rel="stylesheet"> -->
 
     <!-- =======================================================
   * Template Name: Logis - v1.1.0
@@ -73,6 +64,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
   </head>
 
   <body>
@@ -97,18 +89,17 @@
             <li><a href="/services">Services</a></li>
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/accounts/logout">Logout</a></li>
-            <li>
-              <a class="get-a-quote" href="/">Hello, {{user.first_name}}</a>
-            </li>
+            <li><a class="get-a-quote" href="/">Hello, {{user.first_name}}</a></li>
             {% else %}
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/accounts/login">Login</a></li>
             <li><a href="/accounts/login">Register</a></li>
             <li><a href="/plans">Plans</a></li>
-
+            
+            
             {% endif %}
           </ul>
-        </nav>
+        </nav><!-- .navbar -->
         <!-- .navbar -->
       </div>
     </header>
@@ -117,66 +108,96 @@
 
     <main id="main">
       <!-- ======= Breadcrumbs ======= -->
-
-      <!-- ======= Services Section ======= -->
-      <section id="service" class="services pt-0">
-        <div class="breadcrumbs">
-          <div
-            class="page-header d-flex align-items-center"
-            style="background-image: url('assets/img/page-header.jpg')"
-          >
-            <div class="container position-relative">
-              <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 text-center">
-                  <h2>Plans</h2>
-                  <p>
-                   View our amazing plans made specially for you which takes care of all your entertainment !!!
-                  </p>
-                </div>
+      <div class="breadcrumbs">
+        <div
+          class="page-header d-flex align-items-center"
+          style="background-image: url('assets/img/page-header.jpg')"
+        >
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>Plan Details</h2>
+                <p>
+                 View all the features of your preferred plan and after that make sure to checkout to continue with the payment.
+                </p>
               </div>
             </div>
           </div>
-          <nav>
-            <div class="container">
-              <ol>
-                <li><a href="index.html">Home</a></li>
-                <li>Services</li>
-              </ol>
-            </div>
-          </nav>
         </div>
-        <div class="section-header">
-          <span>Our Plans</span>
-          <h2>Our Plans</h2>
+        <nav>
+          <div class="container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li>Service Details</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+      <!-- End Breadcrumbs -->
+
+      <!-- ======= Service Details Section ======= -->
+      <section id="service-details" class="service-details">
+        <div class="container" data-aos="fade-up">
           <div class="row gy-4">
-            {% for plans in plans %}
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="card">
-                <div class="card-img">
-                  <img src="{{plans.images.url}}" alt="" class="img-fluid" />
-                </div>
-                <h3>
-                  <a href="/e/{{plans.id}}" class="stretched-link"
-                    >{{plans.name}}</a
-                  >
-                </h3>
-                <p>{{plans.added_desc}}</p>
+            <div class="col-lg-4">
+              <div class="services-list">
+                <a href="#" class="active">{{plans.f1}}</a>
+                <a href="#">{{plans.f2}}</a>
+                <a href="#">{{plans.f3}}</a>
+                <a href="#">Price- {{plans.amt}}</a>
               </div>
             </div>
-            <!-- End Card Item -->
-            {% endfor %}
+
+            <div class="col-lg-8">
+              <img
+                src="{{plans.images.url}}"
+                alt=""
+                class="img-fluid services-img"
+              />
+              <h3>{{plans.name}}</h3>
+
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle"></i> <span>{{plans.f1}}</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> <span>{{plans.f2}}</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> <span>{{plans.f3}}</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> <span>Price- {{plans.amt}}</span>
+                </li>
+              </ul>
+
+              <p>{{plans.added_desc}}</p>
+
+              
+
+              <div class="row">
+                <div class="col-lg-12">
+                    <div class="submit_btn">
+                        <!--                                        <input type="submit" name="submit" class="boxed-btn4" value="Book Here">-->
+                        <!--                                        <button class="boxed-btn4" type="submit" href='pessanger_detail'>Book here</button>-->
+                        <nav id="navbar" class="navbar">
+                          <ul>
+                        
+                            <li style="margin-left: 300px;margin-top:10px;"><a class="get-a-quote" href="/booking/{{plans.id}}">Buy this Plan</a></li>
+                       
+                        
+                          </ul>
+                        </nav><!-- .navbar -->
+                            
+                    </div>
+                </div>
+            </div>
+
+            </div>
           </div>
         </div>
       </section>
-      <!-- End Services Section -->
-
-      <!-- ======= Features Section ======= -->
-
-      <!-- ======= Frequently Asked Questions Section ======= -->
+      <!-- End Service Details Section -->
     </main>
     <!-- End #main -->
 
@@ -228,11 +249,11 @@
           >
             <h4>Contact Us</h4>
             <p>
-              St. Francis Institute of Technology<br />
-              Borivali West<br />
-              Mumbai - 400103<br /><br />
-              <strong>Phone:</strong> 022 2892 8585<br />
-              <strong>Email:</strong> www.sfit.ac.in<br />
+              A108 Adam Street <br />
+              New York, NY 535022<br />
+              United States <br /><br />
+              <strong>Phone:</strong> +1 5589 55488 55<br />
+              <strong>Email:</strong> info@example.com<br />
             </p>
           </div>
         </div>
@@ -240,7 +261,7 @@
 
       <div class="container mt-4">
         <div class="copyright">
-          &copy; Copyright <strong><span>OTT Subscription Model</span></strong
+          &copy; Copyright <strong><span>Logis</span></strong
           >. All Rights Reserved
         </div>
         <div class="credits">
@@ -252,7 +273,7 @@
         </div>
       </div>
     </footer>
-    End Footer
+    <!-- End Footer -->
     <!-- End Footer -->
 
     <a
@@ -266,13 +287,7 @@
     <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
     <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
     <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-      AOS.refresh();
-    </script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
     <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
   </body>
