@@ -1,8 +1,4 @@
-{% extends "../register/base.html" %}
-{% load static %}
-{% load crispy_forms_tags %}
-{% load i18n %} 
-{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
