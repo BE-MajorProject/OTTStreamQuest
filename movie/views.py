@@ -1,19 +1,25 @@
+from email.message import EmailMessage
 from email.mime import base
 from re import M
+import time
 from typing import final
 import weakref
 from django.shortcuts import get_object_or_404, render
+from django.template.loader import render_to_string, get_template
 
 # Create your views here.
 from django.views.generic import ListView, DetailView
+from flask import redirect
 from numpy import moveaxis
-from .models import Movie, Binary, ott_plans
+
+from inz import settings
+from .models import ConfirmBooking, Movie, Binary, ott_plans
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.db.models import Q
 from rating.models import Rating, Watchlist, List
 from django.views.decorators.csrf import csrf_exempt
-from datetime import datetime
+from datetime import date, datetime
 
 from scipy import spatial
 import operator
@@ -37,6 +43,62 @@ def tp(request):
 
 def movie_detail(request, pk):
     return render(request, 'movie/movie_detail.html')
+
+def booking(request, id):
+    plans = ott_plans.objects.get(id=id)
+    request.session['amt'] = plans.amt
+    if request.method == 'POST':
+        firstName = request.POST['firstName']
+        email = request.POST['email']
+        phoneNo = request.POST['phoneNo']
+        request.session['fname'] = firstName
+        request.session['email'] = email
+        request.session['phone_no'] = phoneNo
+        return render(request, 'movie/receipt.html')
+    else:
+        return render(request, 'movie/booking.html',{'plans':plans})
+
+
+def receipt(request):
+
+    first_name = request.session.get('fname')
+    last_name = request.session.get('lname')
+    today = date.today()
+    t = time.localtime()
+    currentTime = time.strftime("%H:%M:%S", t)
+    return render(request,'movie/receipt.html',{ 'date':today, 'currentTime':currentTime  })
+
+
+def confirm_booking(request):
+    if request.method == 'POST':
+        fullName = request.POST['fullName']
+        email = request.POST['email']
+        phoneNo = request.POST['phoneNo']
+        userName = request.user.username
+
+
+        books = ConfirmBooking(fullName=fullName, userName=userName,email=email,phoneNo=phoneNo)
+        books.save()
+
+        message = render_to_string('movie/order_placed_body.html', {'fullName':fullName,'email':email ,'phoneNo':phoneNo})
+        msg = EmailMessage(
+            'OTT Subscription Model',
+            message,
+            settings.EMAIL_HOST_USER,
+            [request.user.email]
+        )
+        msg.content_subtype = "html"  # Main content is now text/html
+        msg.send()
+
+        # print("Mail successfully sent")
+
+        # print("User Added")
+
+        return redirect('/payment/pay')
+    else:
+        return render(request,'movie/booking.html')
+
+
 
 def get_popular(request, start, finish):
     movies = list(Movie.objects.all().order_by('-popularity'))[start:finish]

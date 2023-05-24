@@ -95,3 +95,24 @@ class ott_plans(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ConfirmBooking(models.Model):
+    fullName = models.CharField(max_length=200,default="")
+    fromCity = models.CharField(max_length=100)
+    toCity = models.CharField(max_length=100)
+    depatureDate = models.DateField()
+    days = models.IntegerField(default=1)
+    noOfRooms = models.IntegerField()
+    noOfAdults = models.IntegerField()
+    noOfChildren = models.IntegerField()
+    email = models.EmailField(max_length=254)
+    phoneNo = models.CharField(max_length=12)
+    amountPerPerson = models.IntegerField(default=0)
+    totalAmount = models.FloatField(default=0)
+    userName = models.CharField(max_length=200, default="")
+    date = models.DateField(("Date"), auto_now_add=True)
+
+
+    def __str__(self):
+        return self.fullName

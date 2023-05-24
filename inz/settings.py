@@ -169,3 +169,17 @@ LANGUAGES = (
 )
 
 LANGUAGE_CODE='en'
+
+#SMTP Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'vedantkadam@student.sfit.ac.in'
+EMAIL_HOST_PASSWORD = 'albsbwcscidvgyqp'
+# EMAIL_ACTIVE_FIELD = 'is_active'
+
+# django_heroku.settings(locals())
+
+RAZOR_KEY_ID ='rzp_test_Q8AZkEbm7RUitk'
+RAZOR_KEY_SECRET ='Esu9mt6ZyXxjrEgnqKKJTjLn'

@@ -27,6 +27,9 @@ urlpatterns = [
     path('addToWatchlist/<int:user_id>/<int:tmdb_id>', views.addToWatchlist, name="addToWatchlist"),
     path('addToList/<int:user_id>/<int:tmdb_id>/<int:list_id>', views.addTolist, name="addTolist"),
     path('plans/', views.plans),
-     path("e/<int:id>/", views.single_ott, name="plans"),
+    path("e/<int:id>/", views.single_ott, name="plans"),
+    path('booking/<int:id>', views.booking, name="booking"),
+    path('receipt', views.receipt, name='receipt'),
+    path('confirm_booking', views.confirm_booking, name='confirm_booking'),
 ] 
 
