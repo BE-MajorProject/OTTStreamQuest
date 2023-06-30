@@ -32,5 +32,6 @@ urlpatterns = [
     path('receipt', views.receipt, name='receipt'),
     path('confirm_booking', views.confirm_booking, name='confirm_booking'),
     path('planbuy', views.planbuy, name="planbuy"),
+    path('contact', views.contact, name="contact"),
 ] 
 

@@ -44,6 +44,10 @@ def tp(request):
 def movie_detail(request, pk):
     return render(request, 'movie/movie_detail.html')
 
+def contact(request):
+    return render(request, 'movie/contact.html')
+
+
 def booking(request, id):
     plans = ott_plans.objects.get(id=id)
     request.session['amt'] = plans.amt
