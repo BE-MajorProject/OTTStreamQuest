@@ -1,31 +1,31 @@
+import operator
+import time
+import weakref
+from datetime import date, datetime
 from email.message import EmailMessage
 from email.mime import base
 from re import M
-import time
 from typing import final
-import weakref
-from django.shortcuts import get_object_or_404, render
-from django.template.loader import render_to_string, get_template
 
+from django import template
+from django.db.models import Q
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.shortcuts import get_object_or_404, render
+from django.template.loader import get_template, render_to_string
+from django.urls import resolve, reverse
+from django.utils.translation import activate
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
-from django.views.generic import ListView, DetailView
+from django.views.generic import DetailView, ListView
 from flask import redirect
 from numpy import moveaxis
+from scipy import spatial
 
 from inz import settings
-from .models import ConfirmBooking, Movie, Binary, ott_plans
-from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
-from django.db.models import Q
-from rating.models import Rating, Watchlist, List
-from django.views.decorators.csrf import csrf_exempt
-from datetime import date, datetime
+from rating.models import List, Rating, Watchlist
 
-from scipy import spatial
-import operator
-from django import template
-from django.urls import reverse, resolve
-from django.utils.translation import activate
+from .models import Binary, ConfirmBooking, Movie, ott_plans
+
 
 def movie_list(request):
     return render(request, 'movie/movie_list.html')
@@ -88,7 +88,7 @@ def confirm_booking(request):
 
         message = render_to_string('movie/order_placed_body.html', {'fullName':fullName,'email':email ,'phoneNo':phoneNo})
         msg = EmailMessage(
-            'OTT Subscription Model',
+            'OTT StreamQuest',
             message,
             settings.EMAIL_HOST_USER,
             [request.user.email]
@@ -353,8 +353,9 @@ def addTolist(request, user_id, tmdb_id, list_id):
 
             return JsonResponse({'user_id': user_id, 'added_to_list': list_id, 'movie of tmdb_id': tmdb_id})
 
-from django_pivot.pivot import pivot
 from django.db.models import Count
+from django_pivot.pivot import pivot
+
 
 def collabRecommendation(request, tmdb_id):
     print("Starting Collaborative Recommendation of movie tmdb_id: "+str(tmdb_id))

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>OTT Subscription model</title>
+    <title>OTT StreamQuest</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -64,7 +64,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  
   </head>
 
   <body>
@@ -76,7 +75,7 @@
         <a href="/" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1>OTT Subscription Model</h1>
+          <h1>OTT StreamQuest</h1>
         </a>
 
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -87,7 +86,11 @@
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/plans">Plans</a></li>
             <li><a href="/movie_list">Movie List</a></li>
-            <li><a href="https://node-googlemeetclone-vedu.onrender.com/">Watch Along</a></li>
+            <li>
+              <a href="https://node-googlemeetclone-vedu.onrender.com/"
+                >Watch Along</a
+              >
+            </li>
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/logout">Logout</a></li>
             <li><a class="get-a-quote" href="/">Hello, {{user}}</a></li>
@@ -96,11 +99,11 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Register</a></li>
             <li><a href="/plans/">Plans</a></li>
-            
-            
+
             {% endif %}
           </ul>
-        </nav><!-- .navbar -->
+        </nav>
+        <!-- .navbar -->
         <!-- .navbar -->
       </div>
     </header>
@@ -119,7 +122,8 @@
               <div class="col-lg-6 text-center">
                 <h2>Plan Details</h2>
                 <p>
-                 View all the features of your preferred plan and after that make sure to checkout to continue with the payment.
+                  View all the features of your preferred plan and after that
+                  make sure to checkout to continue with the payment.
                 </p>
               </div>
             </div>
@@ -168,32 +172,31 @@
                   <i class="bi bi-check-circle"></i> <span>{{plans.f3}}</span>
                 </li>
                 <li>
-                  <i class="bi bi-check-circle"></i> <span>Price- {{plans.amt}}</span>
+                  <i class="bi bi-check-circle"></i>
+                  <span>Price- {{plans.amt}}</span>
                 </li>
               </ul>
 
               <p>{{plans.added_desc}}</p>
 
-              
-
               <div class="row">
                 <div class="col-lg-12">
-                    <div class="submit_btn">
-                        <!--                                        <input type="submit" name="submit" class="boxed-btn4" value="Book Here">-->
-                        <!--                                        <button class="boxed-btn4" type="submit" href='pessanger_detail'>Book here</button>-->
-                        <nav id="navbar" class="navbar">
-                          <ul>
-                        
-                            <li style="margin-left: 300px;margin-top:10px;"><a class="get-a-quote" href="/booking/{{plans.id}}">Buy this Plan</a></li>
-                       
-                        
-                          </ul>
-                        </nav><!-- .navbar -->
-                            
-                    </div>
+                  <div class="submit_btn">
+                    <!--                                        <input type="submit" name="submit" class="boxed-btn4" value="Book Here">-->
+                    <!--                                        <button class="boxed-btn4" type="submit" href='pessanger_detail'>Book here</button>-->
+                    <nav id="navbar" class="navbar">
+                      <ul>
+                        <li style="margin-left: 300px; margin-top: 10px">
+                          <a class="get-a-quote" href="/booking/{{plans.id}}"
+                            >Buy this Plan</a
+                          >
+                        </li>
+                      </ul>
+                    </nav>
+                    <!-- .navbar -->
+                  </div>
                 </div>
-            </div>
-
+              </div>
             </div>
           </div>
         </div>
@@ -276,8 +279,6 @@
     </footer>
     <!-- End Footer -->
     <!-- End Footer -->
-
-    
 
     <!-- Vendor JS Files -->
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>

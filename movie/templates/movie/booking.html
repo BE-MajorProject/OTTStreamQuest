@@ -1,57 +1,72 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"
+    />
+    <link rel="stylesheet" href="/static/styles/bookingFormStyle.css" />
+    <title>OTT StreamQuest</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"/>
-    <link rel="stylesheet" href="/static/styles/bookingFormStyle.css"/>
-    <title>OTT Subscription model</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-  
     <!-- Favicons -->
-    <link href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-video-advertising-agency-flaticons-lineal-color-flat-icons-5.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-</head>
+    <link
+      href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-video-advertising-agency-flaticons-lineal-color-flat-icons-5.png"
+      rel="icon"
+    />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  </head>
 
-<body>
-<form action="" method="post">
-    {% csrf_token %}
-    {% for message in messages %}
-    <li>
+  <body>
+    <form action="" method="post">
+      {% csrf_token %} {% for message in messages %}
+      <li>
         <div class="alert alert-danger">{{message}}</div>
-    </li>
-    {% endfor %}
-    <div id="booking" class="section">
+      </li>
+      {% endfor %}
+      <div id="booking" class="section">
         <div class="section-center">
-            <div class="container">
-                <div class="row">
-                    <div class="booking-form">
-                        <div class="form-header">
-                            <h1>Enter Your Details</h1>
-                        </div>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="First Name"
-                                               name="firstName"/>
-                                        <span class="form-label">FirstName</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="Last Name"
-                                               name="lastName"/>
-                                        <span class="form-label">LastName</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="booking-form">
+                <div class="form-header">
+                  <h1>Enter Your Details</h1>
+                </div>
+                <form>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="First Name"
+                          name="firstName"
+                        />
+                        <span class="form-label">FirstName</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="Last Name"
+                          name="lastName"
+                        />
+                        <span class="form-label">LastName</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input class="form-control" type="text" placeholder="From"
@@ -69,7 +84,7 @@
                                 </div>
                             </div> -->
 
-                            <!-- <div class="row">
+                  <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <input class="form-control" type="date" required name="depatureDate"/>
@@ -86,7 +101,7 @@
                                 </div>
 
                             </div> -->
-                            <!-- <div class="row">
+                  <!-- <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <select class="form-control" name="noOfRooms" required>
@@ -157,50 +172,66 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="email" placeholder="Enter your Email"
-                                               name="email"/>
-                                        <span class="form-label">Email</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="tel" placeholder="Enter you Phone"
-                                               name="phoneNo"/>
-                                        <span class="form-label">Phone</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" value="Amount Rs" name="" disabled/>
-                                        <span class="form-label">Total Amount (INR):</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" value= "{{ request.session.amt }}"
-
-                                              
-                                               name="totalAmount" readonly/>
-                                        <span class="form-label"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-btn">
-                                <button class="submit-btn">Subscribe Now</button>
-                            </div>
-                        </form>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          type="email"
+                          placeholder="Enter your Email"
+                          name="email"
+                        />
+                        <span class="form-label">Email</span>
+                      </div>
                     </div>
-                </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          type="tel"
+                          placeholder="Enter you Phone"
+                          name="phoneNo"
+                        />
+                        <span class="form-label">Phone</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          type="text"
+                          value="Amount Rs"
+                          name=""
+                          disabled
+                        />
+                        <span class="form-label">Total Amount (INR):</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input
+                          class="form-control"
+                          type="text"
+                          value="{{ request.session.amt }}"
+                          name="totalAmount"
+                          readonly
+                        />
+                        <span class="form-label"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-btn">
+                    <button class="submit-btn">Subscribe Now</button>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</form>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-
+      </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
 </html>
