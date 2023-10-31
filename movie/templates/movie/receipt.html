@@ -35,7 +35,7 @@
 <body>
 
 
-<form action="confirm_booking" method="post">
+<form action="/payment/pay" method="post">
     {% csrf_token %}
 
 
@@ -167,10 +167,8 @@
                     </table>
 
                     <div class="d-flex justify-content-center">
-                        <a href="/payment/pay">paytest</a>
-                        <button id="cmd2" class="btn btn-success btn-lg">Confirm
-                            Details
-                        </button>
+                        <!-- <a href="/payment/pay">paytest</a> -->
+                        <button  onclick="/payment/pay" class="btn btn-success btn-lg">Procced with Payment</button>
                     </div>
                 </div>
 
@@ -189,10 +187,10 @@
                     pdf.save('TripologyReceipt.pdf');
                 });
             });
-            {% if confirmation %}
-            alert("This is a success check it out!")
+        //     {% if confirmation %}
+        //     alert("This is a success check it out!")
 
-           {% endif %}
+        //    {% endif %}
 
     </script>
 
