@@ -598,6 +598,7 @@ progress {
 }
 
 .img-fluid {
+  background-color: white;
   max-width: 100%;
   height: auto;
 }
@@ -4358,7 +4359,7 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #000;
-  --bs-accordion-bg: #fff;
+  --bs-accordion-bg: #3d3b3b;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 1px;

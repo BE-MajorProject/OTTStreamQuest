@@ -25,11 +25,12 @@ body
 {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color:var(--out-color);
+    background-color:white;
     color:var(--primaryFontColor);
 }
 
 main{
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -64,7 +65,7 @@ span.white{
 .topnav
 {
     /* overflow: hidden; */
-    background-color: var(--darkest-color);
+    background: #B31312;
     display: flex;
     justify-content: space-between;
     padding-top: 5px;
@@ -85,7 +86,7 @@ div.homepage{
 
 .homepage-btn{
     font-family: 'Poppins', sans-serif;
-    background: var(--primary-color);
+    background:  #0d42ff;
     color: var(--primaryFontColor);
     padding: 14px;
     font-weight: 600;
@@ -147,7 +148,7 @@ div.user, div.user-dropdown{
     padding: 15px 30px;
     margin-bottom: 8px;
     margin-right: 16px;
-    background: var(--secondary-color);
+    background:  #0d42ff;
     color: var(--primaryFontColor);
     font-weight: 600;
     font-size: 22px;
@@ -163,7 +164,7 @@ div.user, div.user-dropdown{
 /* Style The Dropdown Button */
 .user-dropdown-btn, .login-btn{
     font-family: 'Poppins', sans-serif;
-    background: var(--primary-color);
+    background:  #0d42ff;
     color: var(--primaryFontColor);
     padding: 16px;
     font-weight: 600;

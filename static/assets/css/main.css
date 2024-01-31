@@ -11,19 +11,21 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Inter", sans-serif;
   --font-secondary: "Poppins", sans-serif;
 }
-::-webkit-scrollbar{
-  width:10px;
+::-webkit-scrollbar {
+  width: 10px;
 }
-::-webkit-scrollbar-track{
-  background:var(--color-bg);
-  border-radius:50px;
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+  border-radius: 50px;
 }
-::-webkit-scrollbar-thumb{
-  background: #1522e0;
+::-webkit-scrollbar-thumb {
+  background: #B31312;
   border-radius: 50px;
 }
 
@@ -48,7 +50,7 @@ body {
 }
 
 a {
-  color: var(--color-primary);
+   color: #B31312;
   text-decoration: none;
 }
 
@@ -70,6 +72,7 @@ h6 {
 # Sections & Section Header
 --------------------------------------------------------------*/
 section {
+  background-color: #000000;
   padding: 80px 0;
   overflow: hidden;
 }
@@ -86,7 +89,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #001973;
+  color: #b31312;
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
@@ -167,7 +170,7 @@ section {
 }
 
 .breadcrumbs nav {
-  background-color: #f3f6fc;
+  background-color:#3d3b3b;
   padding: 20px 0;
 }
 
@@ -179,11 +182,11 @@ section {
   padding: 0;
   font-size: 16px;
   font-weight: 600;
-  color: var(--color-secondary);
+  color:#B31312;
 }
 
 .breadcrumbs nav ol a {
-  color: var(--color-primary);
+   color: #B31312;
   transition: 0.3s;
 }
 
@@ -191,11 +194,11 @@ section {
   text-decoration: underline;
 }
 
-.breadcrumbs nav ol li+li {
+.breadcrumbs nav ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs nav ol li+li::before {
+.breadcrumbs nav ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #4278cc;
@@ -316,7 +319,7 @@ section {
   transition: all 0.5s;
   z-index: 997;
   padding: 30px 0;
-  background: rgba(14, 29, 52, 0.9);
+  background:#B31312;
 }
 
 .header.sticked {
@@ -382,23 +385,23 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
   .navbar .get-a-quote,
   .navbar .get-a-quote:focus {
-    background: var(--color-primary);
+    background: #fffdfd;
     padding: 8px 20px;
     margin-left: 30px;
     border-radius: 4px;
-    color: #fff;
+    color: #000000;
   }
 
   .navbar .get-a-quote:hover,
   .navbar .get-a-quote:focus:hover {
-    color: #fff;
-    background: #2756ff;
+    color: #040404;
+    background: #501313;
   }
 
   .navbar .dropdown ul {
@@ -426,7 +429,7 @@ section {
     font-size: 15px;
     text-transform: none;
     font-weight: 400;
-    color: var(--color-secondary);
+    color:#B31312;
   }
 
   .navbar .dropdown ul a i {
@@ -435,11 +438,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
-    color: var(--color-primary);
+  .navbar .dropdown ul li:hover > a {
+     color: #B31312;
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -451,7 +454,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -464,13 +467,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -497,7 +499,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(14, 29, 52, 0.9);
+    background: #B31312;
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -527,13 +529,13 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #fff;
   }
 
   .navbar .get-a-quote,
   .navbar .get-a-quote:focus {
-    background: var(--color-primary);
+    background: #B31312;
     padding: 8px 20px;
     border-radius: 4px;
     margin: 15px;
@@ -556,8 +558,8 @@ section {
     border: 1px solid #19335c;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -624,14 +626,14 @@ section {
 }
 
 .featured-services .service-item:hover .icon i {
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 .featured-services .service-item .title {
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 20px;
-  color: var(--color-secondary);
+  color:#B31312;
   transition: 0.3s;
 }
 
@@ -644,7 +646,7 @@ section {
 .featured-services .service-item .readmore {
   display: flex;
   align-items: center;
-  color: var(--color-secondary);
+  color:#B31312;
   transition: 0.3s;
   font-weight: 700;
   font-size: 14px;
@@ -657,7 +659,7 @@ section {
 .featured-services .service-item:hover .title,
 .featured-services .service-item:hover .readmore,
 .featured-services .service-item:hover .icon i {
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 /*--------------------------------------------------------------
@@ -667,7 +669,7 @@ section {
   font-weight: 700;
   font-size: 32px;
   font-family: var(--font-secondary);
-  color: #001f8d;
+  color: #b31312;
 }
 
 .about .content ul {
@@ -684,7 +686,7 @@ section {
 .about .content ul i {
   flex-shrink: 0;
   font-size: 48px;
-  color: var(--color-primary);
+   color: #B31312;
   margin-right: 20px;
   line-height: 0;
 }
@@ -692,7 +694,7 @@ section {
 .about .content ul h5 {
   font-size: 18px;
   font-weight: 700;
-  color: #19335c;
+  color: #b31312;
 }
 
 .about .content ul p {
@@ -706,7 +708,10 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(13, 66, 255, 0.4) 52%);
+  background: radial-gradient(
+    var(--color-primary) 50%,
+    rgba(13, 66, 255, 0.4) 52%
+  );
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -830,18 +835,18 @@ section {
 }
 
 .services .card a {
-  color: #001973;
+  color: #b31312;
   transition: 0.3;
 }
 
 .services .card a:hover {
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 .services .card p {
   padding: 0 30px;
   margin-bottom: 30px;
-  color: var(--color-secondary);
+  color:#B31312;
   font-size: 15px;
 }
 
@@ -853,7 +858,8 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)), url("../img/cta-bg.jpg") center center;
+  background: linear-gradient(rgba(14, 29, 52, 0.6), rgba(14, 29, 52, 0.8)),
+    url("../img/cta-bg.jpg") center center;
   background-size: cover;
   padding: 100px 0;
 }
@@ -900,12 +906,12 @@ section {
   padding-top: 80px;
 }
 
-.features .features-item+.features-item {
+.features .features-item + .features-item {
   margin-top: 100px;
 }
 
 @media (max-width: 640px) {
-  .features .features-item+.features-item {
+  .features .features-item + .features-item {
     margin-top: 40px;
   }
 }
@@ -913,12 +919,13 @@ section {
 .features .features-item h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #001973;
+  color: #b31312;
 }
 
 .features .features-item ul {
   list-style: none;
   padding: 0;
+  color:#ffffff;
 }
 
 .features .features-item ul li {
@@ -932,7 +939,7 @@ section {
 .features .features-item ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 .features .features-item p:last-child {
@@ -955,12 +962,12 @@ section {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 20px;
-  color: var(--color-secondary);
+  color:#B31312;
 }
 
 .pricing h4 {
   font-size: 48px;
-  color: var(--color-primary);
+   color: #B31312;
   font-weight: 400;
   font-family: var(--font-primary);
   margin-bottom: 25px;
@@ -1011,7 +1018,7 @@ section {
   display: inline-block;
   padding: 12px 35px;
   border-radius: 4px;
-  color: var(--color-primary);
+   color: #B31312;
   transition: none;
   font-size: 16px;
   font-weight: 500;
@@ -1026,7 +1033,7 @@ section {
 }
 
 .pricing .featured {
-  border-top-color: var(--color-primary);
+  border-top- color: #B31312;
 }
 
 .pricing .featured .buy-btn {
@@ -1087,7 +1094,7 @@ section {
 }
 
 .faq .accordion-button:not(.collapsed) {
-  color: var(--color-primary);
+   color: #B31312;
   border-bottom: 0;
   box-shadow: none;
 }
@@ -1097,7 +1104,7 @@ section {
   top: 14px;
   left: 25px;
   font-size: 20px;
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 .faq .accordion-button:after {
@@ -1234,7 +1241,7 @@ section {
 .stats-counter .stats-item span {
   font-size: 48px;
   display: block;
-  color: var(--color-secondary);
+  color:#B31312;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -1260,7 +1267,7 @@ section {
   font-family: var(--font-primary);
   font-size: 15px;
   font-weight: 500;
-  color: var(--color-secondary);
+  color:#B31312;
 }
 
 /*--------------------------------------------------------------
@@ -1311,7 +1318,7 @@ section {
 }
 
 .team .member .social a:hover {
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 .team .member .social i {
@@ -1334,12 +1341,12 @@ section {
   font-weight: 700;
   margin-bottom: 0;
   font-size: 24px;
-  color: var(--color-secondary);
+  color:#B31312;
 }
 
 .horizontal-pricing h4 {
   font-size: 48px;
-  color: var(--color-primary);
+   color: #B31312;
   font-weight: 400;
   font-family: var(--font-primary);
   margin-bottom: 25px;
@@ -1392,7 +1399,7 @@ section {
   padding: 12px 40px;
   border-radius: 4px;
   color: #fff;
-  background-color: var(--color-primary);
+  background- color: #B31312;
   border: 2px solid var(--color-primary);
   transition: none;
   font-size: 16px;
@@ -1428,7 +1435,7 @@ section {
 
 .horizontal-pricing .featured .buy-btn:hover {
   background: #fff;
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 /*--------------------------------------------------------------
@@ -1523,7 +1530,7 @@ section {
 
 .get-a-quote .php-email-form input:focus,
 .get-a-quote .php-email-form textarea:focus {
-  border-color: var(--color-primary);
+  border- color: #B31312;
 }
 
 .get-a-quote .php-email-form input {
@@ -1534,7 +1541,7 @@ section {
   padding: 12px 15px;
 }
 
-.get-a-quote .php-email-form button[type=submit] {
+.get-a-quote .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 10px 30px;
@@ -1543,7 +1550,7 @@ section {
   border-radius: 4px;
 }
 
-.get-a-quote .php-email-form button[type=submit]:hover {
+.get-a-quote .php-email-form button[type="submit"]:hover {
   background: rgba(13, 66, 255, 0.8);
 }
 
@@ -1570,7 +1577,7 @@ section {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   margin-top: 40px;
 }
 
@@ -1593,7 +1600,7 @@ section {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: var(--color-secondary);
+  color:#B31312;
 }
 
 .contact .info-item p {
@@ -1621,7 +1628,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1669,7 +1676,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 10px 35px;
@@ -1678,7 +1685,7 @@ section {
   border-radius: 5px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: rgba(13, 66, 255, 0.8);
 }
 
@@ -1707,17 +1714,17 @@ section {
   padding: 8px 0 8px 15px;
   border-left: 3px solid #c2cbdf;
   margin: 20px 0;
-  color: var(--color-secondary);
+  color:#B31312;
   transition: 0.3s;
 }
 
 .service-details .services-list a.active {
   font-weight: 700;
-  border-color: var(--color-primary);
+  border- color: #B31312;
 }
 
 .service-details .services-list a:hover {
-  border-color: var(--color-primary);
+  border- color: #B31312;
 }
 
 .service-details .services-img {
@@ -1727,13 +1734,13 @@ section {
 .service-details h3 {
   font-size: 28px;
   font-weight: 700;
-  color: var(--color-secondary);
+  color:#B31312;
 }
 
 .service-details h4 {
   font-size: 20px;
   font-weight: 700;
-  color: var(--color-secondary);
+  color:#B31312;
 }
 
 .service-details p {
@@ -1755,7 +1762,7 @@ section {
 .service-details ul i {
   font-size: 20px;
   margin-right: 8px;
-  color: var(--color-primary);
+   color: #B31312;
 }
 
 /*--------------------------------------------------------------
@@ -1764,7 +1771,7 @@ section {
 .hero {
   width: 100%;
   min-height: 50vh;
-  background-color: var(--color-secondary);
+  background-color:#3d3b3b;
   background-image: url("../img/hero-bg.png");
   background-size: cover;
   background-position: center;
@@ -1817,7 +1824,7 @@ section {
 }
 
 .hero form .btn-primary {
-  background-color: var(--color-primary);
+  background- color: #B31312;
   padding: 15px 30px;
 }
 
@@ -1865,7 +1872,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  background-color: var(--color-secondary);
+  background-color:#B31312;
   padding: 50px 0;
   color: white;
 }

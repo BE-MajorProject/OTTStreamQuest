@@ -37,7 +37,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body style="background-color: black;">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -113,7 +113,7 @@
           </div>
           <div class="col-lg-6 content order-last  order-lg-first">
             <h3>About Us</h3>
-            <p>
+            <p style="color: white;">
               The above project was developed to fulfill a gap in the market which we aim to occupy. We are looking to be a major player in the OTT Subscription space. Providing a great service that none of our other competitors already offer.
             </p>
             <ul>
@@ -149,11 +149,14 @@
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
 
           <div class="col-md-5">
-            <img src="{% static 'assets/img/home3.svg' %}" class="img-fluid" alt="">
+            <img style="
+            background-color: white;
+            border-radius: 80%;
+        " src="{% static 'assets/img/home3.svg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7">
             <h3>We propose a combined i.e. aggregated subscription model while undercutting their prices by a large margin.</h3>
-            <p class="fst-italic">
+            <p style="color: white;">
               Having the following functionalities
             </p>
             <ul>
@@ -166,11 +169,11 @@
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="{%static 'assets/img/undraw_video_files_fu10.svg' %}" class="img-fluid" alt="">
+            <img  src="{%static 'assets/img/undraw_video_files_fu10.svg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1">
             <h3>Provides the user with a sleek user experience and UI.</h3>
-            <p class="fst-italic">
+            <p style="color: white;">
               Easily accessible website to assist users with their purchase experience.
             </p>
           </div>
@@ -178,11 +181,14 @@
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="{%static 'assets/img/home1.svg' %}" class="img-fluid" alt="">
+            <img style="
+            background-color: white;
+            border-radius: 80%;
+        " src="{%static 'assets/img/home1.svg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7">
             <h3>The project aims to delivers services to a customer at a competitive price point.</h3>
-            <p>Offering a sustainable price model.</p>
+            <p style="color: white;">Offering a sustainable price model.</p>
             <ul>
               <li><i class="bi bi-check"></i> Sustainable pricing model.</li>
               <li><i class="bi bi-check"></i> Aggregated Structure.</li>
@@ -193,14 +199,17 @@
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="{%static 'assets/img/home2.svg' %}" class="img-fluid" alt="">
+            <img style="
+            background-color: white;
+            border-radius: 80%;
+        " src="{%static 'assets/img/home2.svg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1">
             <h3>Several problems with the current Subscription Service Model have been identified and made us create this model.</h3>
-            <p class="fst-italic">
+            <p style="color: white;">
               Dealing with a redundant and cumbersome subscription landscape.
             </p>
-            <p>
+            <p style="color: white;">
               We aim to combat all the problems that have been identified and made available to the masses, and deliver an efficient and effective solution.
             </p>
           </div>
@@ -209,97 +218,7 @@
       </div>
     </section><!-- End Features Section -->
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq">
-      <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-          <span>Frequently Asked Questions</span>
-          <h2>Frequently Asked Questions</h2>
-
-        </div>
-
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-10">
-
-            <div class="accordion accordion-flush" id="faqlist">
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    <i class="bi bi-question-circle question-icon"></i>
-                      What are the benefits of using this service?
-                  </button>
-                </h3>
-                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Yes They definetly can
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    What Is The Cost Of OTT?
-                  </button>
-                </h3>
-                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Yes They definetly can
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    How many streaming services do you provide?
-                  </button>
-                </h3>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Yes They definetly can
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    How many months does the minimum subscription last??
-                  </button>
-                </h3>
-                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Yes They definetly can
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Can multiple people use the same account?
-                  </button>
-                </h3>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Yes They definetly can
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Frequently Asked Questions Section -->
 
   </main><!-- End #main -->
 

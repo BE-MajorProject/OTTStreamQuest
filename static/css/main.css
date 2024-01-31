@@ -4,6 +4,9 @@
     margin-top: 10px;
 }
 
+.change{
+    color: #fff;
+}
 .buttons{
     font-family: 'Poppins', sans-serif;
     display: flex;
