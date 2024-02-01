@@ -1033,7 +1033,7 @@ section {
 }
 
 .pricing .featured {
-  border-top- color: #B31312;
+  border-top-color: #B31312;
 }
 
 .pricing .featured .buy-btn {
@@ -1399,7 +1399,7 @@ section {
   padding: 12px 40px;
   border-radius: 4px;
   color: #fff;
-  background- color: #B31312;
+  background-color: #B31312;
   border: 2px solid var(--color-primary);
   transition: none;
   font-size: 16px;
@@ -1530,7 +1530,7 @@ section {
 
 .get-a-quote .php-email-form input:focus,
 .get-a-quote .php-email-form textarea:focus {
-  border- color: #B31312;
+  border-color: #B31312;
 }
 
 .get-a-quote .php-email-form input {
@@ -1720,11 +1720,11 @@ section {
 
 .service-details .services-list a.active {
   font-weight: 700;
-  border- color: #B31312;
+  border-color: #B31312;
 }
 
 .service-details .services-list a:hover {
-  border- color: #B31312;
+  border-color: #B31312;
 }
 
 .service-details .services-img {
@@ -1824,7 +1824,7 @@ section {
 }
 
 .hero form .btn-primary {
-  background- color: #B31312;
+  background-color: #B31312;
   padding: 15px 30px;
 }
 

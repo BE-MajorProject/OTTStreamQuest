@@ -86,7 +86,7 @@ div.homepage{
 
 .homepage-btn{
     font-family: 'Poppins', sans-serif;
-    background:  #0d42ff;
+    background:  #b31312;
     color: var(--primaryFontColor);
     padding: 14px;
     font-weight: 600;
@@ -148,7 +148,7 @@ div.user, div.user-dropdown{
     padding: 15px 30px;
     margin-bottom: 8px;
     margin-right: 16px;
-    background:  #0d42ff;
+    background:  #b31312;
     color: var(--primaryFontColor);
     font-weight: 600;
     font-size: 22px;
@@ -164,7 +164,7 @@ div.user, div.user-dropdown{
 /* Style The Dropdown Button */
 .user-dropdown-btn, .login-btn{
     font-family: 'Poppins', sans-serif;
-    background:  #0d42ff;
+    background:  #000000;
     color: var(--primaryFontColor);
     padding: 16px;
     font-weight: 600;
