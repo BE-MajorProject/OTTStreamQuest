@@ -6,6 +6,7 @@ app_name = 'movies_name'
 
 urlpatterns = [
     path('', views.tp, name="movie_list"),
+    path('added_plans/', views.added_plans, name="added_plans"),
     path('movie_list/', views.movie_list, name="movie_list"),
     path('details/<int:pk>',  views.movie_detail, name="movie_detail"),
     path('get_popular/<int:start>/<int:finish>', views.get_popular, name="get_popular"),

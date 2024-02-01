@@ -30,6 +30,10 @@ from .models import Binary, ConfirmBooking, Movie, ott_plans
 def movie_list(request):
     return render(request, 'movie/movie_list.html')
 
+
+def added_plans(request):
+    return render(request, 'movie/added_plans.html')
+
 def plans(request):
     plans= ott_plans.objects.all().order_by('-createdTime')
     return render(request, 'movie/plans.html', {'plans':plans})
