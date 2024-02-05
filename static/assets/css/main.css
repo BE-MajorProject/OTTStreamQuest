@@ -686,7 +686,7 @@ section {
 .about .content ul i {
   flex-shrink: 0;
   font-size: 48px;
-   color: #B31312;
+   color: #ffffff;
   margin-right: 20px;
   line-height: 0;
 }
@@ -810,7 +810,7 @@ section {
 --------------------------------------------------------------*/
 .services .card {
   border: 1px solid rgba(14, 29, 52, 0.15);
-  background: #fff;
+  background: #201d1d;
   position: relative;
   border-radius: 0;
   height: 100%;
@@ -846,7 +846,7 @@ section {
 .services .card p {
   padding: 0 30px;
   margin-bottom: 30px;
-  color:#B31312;
+  color:#ffffff;
   font-size: 15px;
 }
 

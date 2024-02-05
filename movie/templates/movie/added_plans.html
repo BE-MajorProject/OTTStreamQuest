@@ -94,13 +94,14 @@
             {% if user.is_authenticated %}
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/plans">Plans</a></li>
-            <!-- <li><a href="/movie_list">Movie List</a></li>
+            <li><a href="/movie_list">Movie List</a></li>
+            <li><a href="/added_plans">Added Plans</a></li>
             <li>
               <a href="https://node-googlemeetclone-vedu.onrender.com/"
                 >Watch Along</a
-              > -->
+              >
             </li>
-            <li><a href="/contact">Contact Us</a></li>
+
             <li><a href="/logout">Logout</a></li>
             <li><a class="get-a-quote" href="/">Hello, {{user}}</a></li>
             {% else %}
@@ -124,10 +125,7 @@
       <!-- ======= Services Section ======= -->
       <section id="service" class="services pt-0">
         <div class="breadcrumbs">
-          <div
-            class="page-header d-flex align-items-center"
-            style="background-image: url('assets/img/page-header.jpg')"
-          >
+          <div class="page-header d-flex align-items-center">
             <div class="container position-relative">
               <div class="row d-flex justify-content-center">
                 <div class="col-lg-6 text-center">
@@ -140,87 +138,178 @@
               </div>
             </div>
           </div>
-         
         </div>
 
         <div class="section-header">
           <span>Selected Plans</span>
           <h2>Selected Plans</h2>
           <div class="row gy-4">
-              <!-- First Card Item -->
-              <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{%static 'assets/img/net.png' %}" alt="" class="img-fluid" />
-                    </div>
-                    <h3>
-                        <a href="" class="stretched-link">Netflix</a>
-                    </h3>
-                    <p>dummy test</p>
+            <!-- First Card Item -->
+            <div
+              class="col-lg-4 col-md-6 box"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="{%static 'assets/img/Netflix-Social-Rectangle.png' %}"
+                    alt=""
+                    class="img-fluid"
+                  />
                 </div>
-                <div class="submit_btn">
-                    <nav id="navbar" class="navbar">
-                        <ul>
-                            <li style="margin-left: 150px; margin-top: 10px;">
-                                <a style="background-color: #B31312; color:white;padding: 15px 30px 20px; position: relative; bottom: 10px;" class="get-a-quote"  onclick="removeBox(this)">Remove</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <h3>
+                  <a href="" class="stretched-link">Netflix</a>
+                </h3>
+                <p>
+                  Netflix is an American subscription video on-demand
+                  over-the-top streaming service.
+                </p>
+              </div>
+              <div class="submit_btn">
+                <nav id="navbar" class="navbar">
+                  <ul>
+                    <li style="margin-left: 150px; margin-top: 10px">
+                      <a
+                        style="
+                          background-color: #b31312;
+                          color: white;
+                          padding: 15px 30px 20px;
+                          position: relative;
+                          bottom: 10px;
+                        "
+                        class="get-a-quote"
+                        onclick="removeBox(this)"
+                        >Remove</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-              <!-- End First Card Item -->
-      
-              <!-- Second Card Item (Duplicate) -->
-              <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{%static 'assets/img/net.png' %}" alt="" class="img-fluid" />
-                    </div>
-                    <h3>
-                        <a href="" class="stretched-link">Netflix</a>
-                    </h3>
-                    <p>dummy test</p>
-                </div>
-                <div class="submit_btn">
-                    <nav id="navbar" class="navbar">
-                        <ul>
-                            <li style="margin-left: 150px; margin-top: 10px;">
-                                <a style="background-color: #B31312; color:white;padding: 15px 30px 20px; position: relative; bottom: 10px;" class="get-a-quote"  onclick="removeBox(this)">Remove</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-              <!-- End Second Card Item -->
-      
-              <!-- Third Card Item (Duplicate) -->
-              <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="{%static 'assets/img/net.png' %}" alt="" class="img-fluid" />
-                    </div>
-                    <h3>
-                        <a href="" class="stretched-link">Netflix</a>
-                    </h3>
-                    <p>dummy test</p>
-                </div>
-                <div class="submit_btn">
-                    <nav id="navbar" class="navbar">
-                        <ul>
-                            <li style="margin-left: 150px; margin-top: 10px;">
-                                <a style="background-color: #B31312; color:white;padding: 15px 30px 20px; position: relative; bottom: 10px;" class="get-a-quote" onclick="removeBox(this)">Remove</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-              <!-- End Third Card Item -->
-          </div>
-      </div>
-      
-      
+            <!-- End First Card Item -->
 
-        
+            <!-- Second Card Item (Duplicate) -->
+            <div
+              class="col-lg-4 col-md-6 box"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="{%static 'assets/img/amazon_2.jpg_1718483346.jpg' %}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+                <h3>
+                  <a href="" class="stretched-link">Amazon Prime Video</a>
+                </h3>
+                <p>
+                  Amazon Prime Video, or simply Prime Video, is an American
+                  subscription video on-demand over-the-top
+                </p>
+              </div>
+              <div class="submit_btn">
+                <nav id="navbar" class="navbar">
+                  <ul>
+                    <li style="margin-left: 150px; margin-top: 10px">
+                      <a
+                        style="
+                          background-color: #b31312;
+                          color: white;
+                          padding: 15px 30px 20px;
+                          position: relative;
+                          bottom: 10px;
+                        "
+                        class="get-a-quote"
+                        onclick="removeBox(this)"
+                        >Remove</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- End Second Card Item -->
+
+            <!-- Third Card Item (Duplicate) -->
+            <div
+              class="col-lg-4 col-md-6 box"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="{%static 'assets/img/maxresdefault.jpg' %}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+                <h3>
+                  <a href="" class="stretched-link">Apple Tv</a>
+                </h3>
+                <p>
+                  Apple TV is a streaming box that turns a TV into a smart TV
+                  and stream video from the tvOS app stor
+                </p>
+              </div>
+              <div class="submit_btn">
+                <nav id="navbar" class="navbar">
+                  <ul>
+                    <li style="margin-left: 150px; margin-top: 10px">
+                      <a
+                        style="
+                          background-color: #b31312;
+                          color: white;
+                          padding: 15px 30px 20px;
+                          position: relative;
+                          bottom: 10px;
+                        "
+                        class="get-a-quote"
+                        onclick="removeBox(this)"
+                        >Remove</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- End Third Card Item -->
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="submit_btn">
+                <!--                                        <input type="submit" name="submit" class="boxed-btn4" value="Book Here">-->
+                <!--                                        <button class="boxed-btn4" type="submit" href='pessanger_detail'>Book here</button>-->
+                <nav id="navbar" class="navbar">
+                  <ul>
+                    <li style="margin-left: 150px; margin-top: 10px">
+                      <a
+                        style="
+                          background-color: #b31312;
+                          color: white;
+                          padding: 17px 60px 20px;
+                          position: relative;
+                          bottom: -85px;
+                          left: 490px;
+                          margin-bottom: 30px;
+                        "
+                        class="get-a-quote"
+                        href="/booking/3"
+                        >Buy Now !</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <!-- .navbar -->
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- End Services Section -->
 
@@ -232,14 +321,20 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
-
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="/" class="logo d-flex align-items-center">
               <span>OTT StreamQuest</span>
             </a>
-            <p>A major Hub that provides multiple streaming services for a price that is less costly and provides the same user experience. Multiple streaming services at a single place. Helps you pick the right pack according to what your preference is. The Hub provides top subscription video services amd on-demand over-the-top streaming platforms.</p>
+            <p>
+              A major Hub that provides multiple streaming services for a price
+              that is less costly and provides the same user experience.
+              Multiple streaming services at a single place. Helps you pick the
+              right pack according to what your preference is. The Hub provides
+              top subscription video services amd on-demand over-the-top
+              streaming platforms.
+            </p>
             <div class="social-links d-flex mt-4">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -247,7 +342,7 @@
               <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-  
+
           <div class="col-lg-2 col-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
@@ -258,26 +353,27 @@
               <li><a href="#">Privacy policy</a></li>
             </ul>
           </div>
-  
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
             <h4>Contact Us</h4>
             <p>
-              Mount Poinsur,<br>
-              S.V.P. Road,<br>
-              Borivali (West),<br>
-              Mumbai 400 103.<br><br>
-              <strong>Phone:</strong> +91 9136951119<br>
-              <strong>Email:</strong> https://www.sfit.ac.in/<br>
+              Mount Poinsur,<br />
+              S.V.P. Road,<br />
+              Borivali (West),<br />
+              Mumbai 400 103.<br /><br />
+              <strong>Phone:</strong> +91 9136951119<br />
+              <strong>Email:</strong> https://www.sfit.ac.in/<br />
             </p>
-  
           </div>
-  
         </div>
       </div>
-  
+
       <div class="container mt-4">
         <div class="copyright">
-          &copy; Copyright <strong><span>OTT Multitude</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>OTT Multitude</span></strong
+          >. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
@@ -287,8 +383,8 @@
           Designed by <a href="https://bootstrapmade.com/">OTT Multitude</a>
         </div>
       </div>
-  
-    </footer><!-- End Footer -->
+    </footer>
+    <!-- End Footer -->
 
     <!-- End Footer -->
 
@@ -296,14 +392,14 @@
     <script>
       function removeBox(element) {
         // Find the closest ancestor with the class 'box' and remove it
-        var boxElement = element.closest('.box');
+        var boxElement = element.closest(".box");
 
         // Remove the box element
         if (boxElement) {
-            boxElement.remove();
+          boxElement.remove();
         }
-    }
-  </script>
+      }
+    </script>
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
     <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>

@@ -52,17 +52,7 @@
                     <button class="login-btn" onclick="location.href='/login'" type="button">{% translate "sign-in" %}</button>
                 </div>
                 {% endif %}
-                <div class="user-dropdown">
-                    <button class="user-dropdown-btn"> {{ LANGUAGE_CODE }} <i class="fa fa-caret-down"></i></button>
-                    <div class="user-dropdown-content">
-                        {% for language in languages %}
-                        <a href="/{{ language.code }}/{{request.get_full_path|slice:"4:"}}"
-                        {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
-                        {{ language.name_translated }}
-                        </a>
-                        {% endfor %}
-                    </div>
-                </div>
+              
             </div>
         </div>
             {% block title %}

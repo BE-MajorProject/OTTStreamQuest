@@ -20,6 +20,11 @@ from django.views.generic import DetailView, ListView
 from flask import redirect
 from numpy import moveaxis
 from scipy import spatial
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.neighbors import NearestNeighbors
+# Creating an instance of the NearestNeighbors class
+recommender = NearestNeighbors(metric='cosine')
 
 from inz import settings
 from rating.models import List, Rating, Watchlist
