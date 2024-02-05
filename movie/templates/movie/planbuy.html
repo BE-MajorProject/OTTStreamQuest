@@ -85,13 +85,11 @@
             {% if user.is_authenticated %}
             <li><a href="/" class="active">Home</a></li>
             <li><a href="/plans">Plans</a></li>
-            <li><a href="/movie_list">Movie List</a></li>
-            <!-- <li>
-              <a href="https://node-googlemeetclone-vedu.onrender.com/"
-                >Watch Along</a
-              >
-            </li> -->
-           
+             <li><a href="/movie_list">Movie List</a></li>
+             <li><a href="/added_plans">Added Plans</a></li>
+             <li><a href="https://imdb-react-git-main-vedantkadam.vercel.app/">Recommend Me</a></li>
+  
+            <!-- <li><a href="https://node-googlemeetclone-vedu.onrender.com/">Watch Along</a></li>  -->
             <li><a href="/logout">Logout</a></li>
             <li><a class="get-a-quote" href="/">Hello, {{user}}</a></li>
             {% else %}
@@ -99,10 +97,11 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Register</a></li>
             <li><a href="/plans/">Plans</a></li>
-
+            
+            
             {% endif %}
           </ul>
-        </nav>
+        </nav><!-- .navbar -->
         <!-- .navbar -->
         <!-- .navbar -->
       </div>
@@ -112,24 +111,17 @@
 
     <main id="main">
       <!-- ======= Breadcrumbs ======= -->
-      <div class="breadcrumbs">
+      <div style="background-color: black;" class="breadcrumbs">
         <div class="page-header d-flex align-items-center">
           <div class="container position-relative">
            
               <div class="col-lg-6 text-center">
-                <h2>Plan Details</h2>
+                <h2 style="position: relative;left: 350px;">Plan Details</h2>
               </div>
             </div>
           </div>
         </div>
-        <nav>
-          <div class="container">
-            <ol>
-              <li><a href="index.html">Home</a></li>
-              <li>Service Details</li>
-            </ol>
-          </div>
-        </nav>
+       
       </div>
       <!-- End Breadcrumbs -->
 
@@ -159,11 +151,11 @@
               <ul>
                 <li>
                   <i class="bi bi-check-circle"></i>
-                  <span>Validity - 1 year</span>
+                  <span style="color: white;">Validity - 1 year</span>
                 </li>
                 <li>
                   <i class="bi bi-check-circle"></i>
-                  <span>Univeral login key - hsxhxvgvxhbsnxsx</span>
+                  <span style="color: white;">Univeral login key - hsxhxvgvxhbsnxsx</span>
                 </li>
               </ul>
             </div>
@@ -176,13 +168,14 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
+
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span>Logis</span>
+            <a href="/" class="logo d-flex align-items-center">
+              <span>OTT StreamQuest</span>
             </a>
-
+            <p>A major Hub that provides multiple streaming services for a price that is less costly and provides the same user experience. Multiple streaming services at a single place. Helps you pick the right pack according to what your preference is. The Hub provides top subscription video services amd on-demand over-the-top streaming platforms.</p>
             <div class="social-links d-flex mt-4">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -190,7 +183,7 @@
               <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-
+  
           <div class="col-lg-2 col-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
@@ -201,47 +194,37 @@
               <li><a href="#">Privacy policy</a></li>
             </ul>
           </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div
-            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
-          >
+  
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
             <p>
-              A108 Adam Street <br />
-              New York, NY 535022<br />
-              United States <br /><br />
-              <strong>Phone:</strong> +1 5589 55488 55<br />
-              <strong>Email:</strong> info@example.com<br />
+              Mount Poinsur,<br>
+              S.V.P. Road,<br>
+              Borivali (West),<br>
+              Mumbai 400 103.<br><br>
+              <strong>Phone:</strong> +91 9136951119<br>
+              <strong>Email:</strong> https://www.sfit.ac.in/<br>
             </p>
+  
           </div>
+  
         </div>
       </div>
-
+  
       <div class="container mt-4">
         <div class="copyright">
-          &copy; Copyright <strong><span>Logis</span></strong
-          >. All Rights Reserved
+          &copy; Copyright <strong><span>OTT Multitude</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="https://bootstrapmade.com/">OTT Multitude</a>
         </div>
       </div>
-    </footer>
+  
+    </footer><!-- End Footer -->
     <!-- End Footer -->
     <!-- End Footer -->
 
