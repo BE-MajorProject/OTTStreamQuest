@@ -1,69 +1,98 @@
-{% load static %}
-{% load i18n %} 
-{% get_current_language as LANGUAGE_CODE %}
-{% get_available_languages as LANGUAGES %}
-{% get_language_info_list for LANGUAGES as languages %}
+{% load static %} {% load i18n %} 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-
-        <meta charset="UTF-8">
-        <title>Movies</title>
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="{% url 'javascript-catalog' %}"></script>
-        <link href="{% static 'css/shared.css' %}" rel="stylesheet" type="text/css" />
-        <link href="{% static 'css/select.css' %}" rel="stylesheet" type="text/css" />
-        <script src="{% static 'js/search_button.js' %}"></script>
-    </head>
-    <body style="background-color: black;">
-        <div class="topnav">
-            <div class="homepage">
-                <button class="homepage-btn" onclick="location.href='/'" type="button"><i class="fa fa-film"></i> Movie Recommendation App</button>
-            </div>
-            <div class="search">
-                <div class="search-dropdown">
-                    <button class="search-dropdown-btn" id="search-dropdown-btn"></button>
-                    <div id="search-dropdown" class="search-dropdown-content">
-                      <a id="drop-title">{% translate "title_" %}</a>
-                      <a id="drop-keyword">{% translate "keyword" %}</a>
-                      <a id="drop-director">{% translate "director" %}</a>
-                    </div>
-                </div>
-                <form id="form-search" method="post">
-                    {% csrf_token %}
-                    <input id="search-input" type="text" placeholder="{% translate 'search-placeholder' %}"><button id="search-submit" type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <div class="dropdowns">
-                {% if user.is_authenticated %}
-                <div class="user-dropdown">
-                    <button class="user-dropdown-btn"><i class="fa fa-user"></i> {{ user }} <i class="fa fa-caret-down"></i></button>
-                    <div class="user-dropdown-content">
-                        <a href="/user/{{ user.id }}">{% translate "your-activity" %}</a>
-                        <a href="/user/{{ user.id }}/ratings">{% translate "your-ratings" %}</a>
-                        <a href="/user/{{ user.id }}/watchlist">{% translate "your-watchlist" %}</a>
-                        <a href="/user/{{ user.id }}/lists">{% translate "your-lists" %}</a>
-                        <a href="/logout">{% translate "logout" %}</a>
-                    </div>
-                </div>
-                {% else %}
-                <div class="user">
-                    <button class="login-btn" onclick="location.href='/login'" type="button">{% translate "sign-in" %}</button>
-                </div>
-                {% endif %}
-              
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="{% url 'javascript-catalog' %}"></script>
+    <link
+      href="{% static 'css/shared.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'css/select.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="{% static 'js/search_button.js' %}"></script>
+  </head>
+  <body style="background-color: black">
+    <div class="topnav">
+      <div class="homepage">
+        <button class="homepage-btn" onclick="location.href='/'" type="button">
+          <i class="fa fa-film"></i> Movie Recommendation App
+        </button>
+      </div>
+      <div class="search">
+        <div class="search-dropdown">
+          <button class="search-dropdown-btn" id="search-dropdown-btn"></button>
+          <div id="search-dropdown" class="search-dropdown-content">
+            <a id="drop-title">{% translate "title_" %}</a>
+            <a id="drop-keyword">{% translate "keyword" %}</a>
+            <a id="drop-director">{% translate "director" %}</a>
+          </div>
         </div>
-            {% block title %}
+        <form id="form-search" method="post">
+          {% csrf_token %}
+          <input
+            id="search-input"
+            type="text"
+            placeholder="{% translate 'search-placeholder' %}"
+          /><button id="search-submit" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
 
-            {% endblock %}
-            {% block content %}
-    
-            {% endblock %}
-    </body>
-    {% if user.is_authenticated %}
-    <div id="user_id" class="hidden_info">{{ user.id }}</div>
-    {% endif %}
-    <div id="lang" class="hidden_info">{{ LANGUAGE_CODE }}</div>
+      <div class="user">
+        <a
+          href="https://imdb-react-git-main-vedantkadams-projects-ffa43a3a.vercel.app/"
+        >
+          <button class="login-btn" type="button">Go Live !</button>
+        </a>
+      </div>
+      <div class="dropdowns">
+        {% if user.is_authenticated %}
+        <div class="user-dropdown">
+          <button class="user-dropdown-btn">
+            <i class="fa fa-user"></i> {{ user }}
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="user-dropdown-content">
+            <a href="/user/{{ user.id }}">{% translate "your-activity" %}</a>
+            <a href="/user/{{ user.id }}/ratings"
+              >{% translate "your-ratings" %}</a
+            >
+            <a href="/user/{{ user.id }}/watchlist"
+              >{% translate "your-watchlist" %}</a
+            >
+            <a href="/user/{{ user.id }}/lists">{% translate "your-lists" %}</a>
+            <a href="/logout">{% translate "logout" %}</a>
+          </div>
+        </div>
+        {% else %}
+        <div class="user">
+          <button
+            class="login-btn"
+            onclick="location.href='/login'"
+            type="button"
+          >
+            {% translate "sign-in" %}
+          </button>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% block title %} {% endblock %} {% block content %} {% endblock %}
+  </body>
+  {% if user.is_authenticated %}
+  <div id="user_id" class="hidden_info">{{ user.id }}</div>
+  {% endif %}
+  <div id="lang" class="hidden_info">{{ LANGUAGE_CODE }}</div>
 </html>
