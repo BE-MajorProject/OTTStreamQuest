@@ -21,8 +21,11 @@ OTT StreamQuest is a proactive solution designed to empower users to effortlessl
    ```bash
    pip install -r requirements.txt
    ```
-You can download the necessary "media" folder and database from there:
+3. You can download the necessary "media" folder and database from there:
 [Click Here to download](https://drive.google.com/drive/folders/1EKVAT5DhV5mdZaeraojxyOFc1l-TMTTn?usp=sharing)
+
+4. Entire Documentation of this Project:
+[Click Here to download](https://drive.google.com/drive/folders/1q7QZ3wfnZ2-Bmx6R-D3OwfYuLmuxbLv5?usp=sharing)
 
 ## UI Screenshots
 
